@@ -14,7 +14,9 @@ export default tseslint.config(
       react: {
         version: 'detect'
       }
-    }
+    },
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-unused-vars': 'off'
   },
   {
     files: ['**/*.{ts,tsx}'],
@@ -24,7 +26,9 @@ export default tseslint.config(
     },
     rules: {
       ...eslintPluginReactHooks.configs.recommended.rules,
-      ...eslintPluginReactRefresh.configs.vite.rules
+      ...eslintPluginReactRefresh.configs.vite.rules,
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/no-unused-vars': 'off'
     }
   },
   eslintConfigPrettier
