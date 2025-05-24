@@ -25,6 +25,7 @@ function createWindow(): void {
           frame: process.platform === 'win32' ? true : false,
         }),
     backgroundMaterial: process.platform === 'win32' ? 'acrylic' : undefined,
+    titleBarStyle: 'hidden',
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,
